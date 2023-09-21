@@ -65,7 +65,7 @@
     {
       try 
       { 
-        $query = "CALL akconcep_SistemasDistribuidos.".$SP."( ";
+        $query = "CALL akconcep_equipo4.".$SP."( ";
         $this->MQ = $MQ;
         $this->qq = $query;
         $this->params = $params;
@@ -112,5 +112,7 @@
         echo  $e->getMessage();  
       } 
    }//fin funcion ejecutaSPSafe 
+
+   /*CALL SP_Name("valP1","valP2","..");*/
 }
 ?>
