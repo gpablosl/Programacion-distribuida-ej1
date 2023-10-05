@@ -149,3 +149,22 @@ function llenarModal(parametro){
         myModal.show();
     });
 }
+
+function mnuCards(){
+    $.post("modulos/cards/showCards.php",{})
+    .done(function(data)
+    {
+        $("#dvContainer").html("");
+        $("#dvContainer").html(data);
+    });
+}
+
+function hacerBusqueda(){
+    varCriterioBusqueda = $("#txtBuscar").val();
+    $.post("modulos/cards/jxGetArticulos.php",{criterioBusqueda: varCriterioBusqueda})
+    .done(function(data)
+    {
+        $("#dvResultadoBusqueda").html("");
+        $("#dvResultadoBusqueda").html(data);
+    });
+}

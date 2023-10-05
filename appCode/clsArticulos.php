@@ -17,6 +17,10 @@ class Articulos
         return $this->objMysql->ejecutaSPSafe('sp_getArticulos_4',null,$MQ);   
     }
     
+    public function getBuscarArticulos ($criterioBusqueda, $MQ=false){
+        return $this->objMysql->ejecutaSPSafe('sp_getBuscarArticulos',array($criterioBusqueda),$MQ);   
+    }
+
     // Elimina el cliente que cumpla con el id recibido
     public function deleteArticulos($idCliente, $MQ=false){
         //select all data       
